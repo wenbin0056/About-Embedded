@@ -8,7 +8,9 @@
 1. freeRTOS
 2. Linux
 3. HuaweiLiteOS
-4. 
+4. U-BOOT
+>	> 1. 编译：make ARCH=arm CROSS_COMPILE=arm-hisiv600-linux- hi355x_xxx_config
+>	> * make ARCH=arm CROSS_COMPILE=arm-hisiv600-linux-
 
 
 
