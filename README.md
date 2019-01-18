@@ -13,6 +13,15 @@
 
 
 =========================================
+## 管理工具的使用
+>
+### git
+* git ignore
+>	> 1.  touch ./.git/.gitignore
+>	> *  git config --global core.excludesfile ./.git/.gitignore
+>	> *  vi ./.git/.gitignore [app.IAB etc...]
+
+
 
 =========================================
 ## 脚本
