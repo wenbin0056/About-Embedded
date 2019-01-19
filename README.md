@@ -22,6 +22,7 @@
 >	> 1.  touch ./.git/.gitignore
 >	> *  git config --global core.excludesfile ./.git/.gitignore
 >	> *  vi ./.git/.gitignore [app.IAB etc...]
+>	> *  windows在顶层目录下创建.gitignore文件，编辑好即可。
 
 
 
