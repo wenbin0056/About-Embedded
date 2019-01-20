@@ -15,7 +15,7 @@
 
 
 =========================================
-## 管理工具的使用
+## 常用工具的使用
 >
 ### git
 * git ignore
@@ -24,7 +24,20 @@
 >	> *  vi ./.git/.gitignore [app.IAB etc...]
 >	> *  windows在顶层目录下创建.gitignore文件，编辑好即可。
 
+### 搭建samba服务器
+> 1. apt-get install samba
+> 2. 配置/etc/samba/smb.conf
 
+```
+[work]
+     path = /work/
+     available = yes
+     browsealbe = yes
+     public = yes
+     writable = yes
+```
+
+> * service smb restart
 
 =========================================
 ## 脚本
