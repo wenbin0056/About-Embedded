@@ -2,7 +2,13 @@
 关于嵌入式
 
 
-=========================================
+=== 
+### Linux 命令
+>
+- cp 覆盖拷贝：
+
+
+===
 ## RTOS
 >
 1. freeRTOS
@@ -23,6 +29,11 @@
 >	> *  git config --global core.excludesfile ./.git/.gitignore
 >	> *  vi ./.git/.gitignore [app.IAB etc...]
 >	> *  windows在顶层目录下创建.gitignore文件，编辑好即可。
+
+- 忽略filemode： git config --add core.filemode false; 
+- 添加所有改变文件：git add -A .
+- 添加所有修改和删除的文件（不包括新文件）：git add -u
+ 
 
 ### 搭建samba服务器
 > 1. apt-get install samba
