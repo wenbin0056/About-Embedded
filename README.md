@@ -6,7 +6,9 @@
 ### Linux 命令
 >
 - cp 覆盖拷贝：
-
+- 查看指定软件有多少个版本：apt-cache madison package
+- 搜索可安装的包： apt-cache search package
+-  更新源：/etc/apt/sources.list, apt-get update
 
 ===
 ## RTOS
