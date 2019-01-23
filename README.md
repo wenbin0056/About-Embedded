@@ -1,6 +1,15 @@
 # About-Embedded
 关于嵌入式
 
+===
+### ubuntu 镜像下载
+>
+- http://www.ubuntu.org.cn/download/ubuntu-kylin
+
+
+### cmake
+>
+- 
 
 === 
 ### Linux 命令
@@ -8,7 +17,10 @@
 - cp 覆盖拷贝：
 - 查看指定软件有多少个版本：apt-cache madison package
 - 搜索可安装的包： apt-cache search package
--  更新源：/etc/apt/sources.list, apt-get update
+- 更新源：/etc/apt/sources.list, apt-get update
+- 添加DNS：vim /etc/resolv.conf nameserver 8.8.8.8
+- 添加动态库路径：export LD_LIBRARY_PATH+=:/usr/local/lib/
+- 添加环境变量：export PATH+=:/usr/local/lib/
 
 ===
 ## RTOS
@@ -39,6 +51,7 @@
 
 ### 搭建samba服务器
 > 1. apt-get install samba
+> * /etc/init.d/samba start
 > 2. 配置/etc/samba/smb.conf
 
 ```
