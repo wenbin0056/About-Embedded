@@ -21,6 +21,7 @@
 - 添加DNS：vim /etc/resolv.conf nameserver 8.8.8.8
 - 添加动态库路径：export LD_LIBRARY_PATH+=:/usr/local/lib/
 - 添加环境变量：export PATH+=:/usr/local/lib/
+- 查看文件格式： file -b filename
 
 ===
 ## RTOS
