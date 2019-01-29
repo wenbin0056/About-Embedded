@@ -22,6 +22,8 @@
 - 添加动态库路径：export LD_LIBRARY_PATH+=:/usr/local/lib/
 - 添加环境变量：export PATH+=:/usr/local/lib/
 - 查看文件格式： file -b filename
+- 查看默认网关：route
+- 添加网关：route add default gw 192.168.1.1
 
 ===
 ## RTOS
@@ -32,6 +34,9 @@
 4. U-BOOT
 >	> 1. 编译：make ARCH=arm CROSS_COMPILE=arm-hisiv600-linux- hi355x_xxx_config
 >	> * make ARCH=arm CROSS_COMPILE=arm-hisiv600-linux-
+
+* ubuntu:
+网络：
 
 
 
