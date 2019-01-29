@@ -18,12 +18,19 @@
 - 查看指定软件有多少个版本：apt-cache madison package
 - 搜索可安装的包： apt-cache search package
 - 更新源：/etc/apt/sources.list, apt-get update
-- 添加DNS：vim /etc/resolv.conf nameserver 8.8.8.8
+- 添加DNS：
+1. 配置：sudo vim /etc/resolvconf/resolv.conf.d/base；添加nameserver 8.8.8.8
+2. 执行：resolvconf -u
+3. 验证：cat /etc/resolv.conf
+
 - 添加动态库路径：export LD_LIBRARY_PATH+=:/usr/local/lib/
 - 添加环境变量：export PATH+=:/usr/local/lib/
 - 查看文件格式： file -b filename
 - 查看默认网关：route
 - 添加网关：route add default gw 192.168.1.1
+- 文件传输工具，http命令行工具：curl
+- 关闭防火墙： sudo ufw disable
+- 查看ubuntu版本：sudo lsb_release -a
 
 ===
 ## RTOS
