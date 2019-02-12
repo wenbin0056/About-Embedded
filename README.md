@@ -11,7 +11,7 @@
 - 下载 mingw；www.mingw.org
 - 运行，选择mingw32-gcc-g++，左上角安装
 - 添加环境变量C:\MinGW\bin
-- 验证g++ -V
+- 验证g++ -v
 
 
 
