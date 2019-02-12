@@ -73,13 +73,15 @@ int main(int argc,char *argv[])
     }
 
     /*accept a client's request*/
-    if((clientfd=accept(sockfd,(struct sockaddr  *)&clientSockaddr, &sinSize))==-1)
+    if((clientfd=accept(sockfd,(struct sockaddr  *)&clientSockaddr, (socklen_t*)&sinSize))==-1)
     {
         perror("fail to accept");
         exit(1);
     }
+	
     printf("Success to accpet a connection request...\n");
     printf(" %s join in!\n",inet_ntoa(clientSockaddr.sin_addr));
+	
     while(1)
     {
         /*receive datas from client*/

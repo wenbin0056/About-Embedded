@@ -33,16 +33,16 @@ int main(int argc,char *argv[])
     host=gethostbyname(argv[1]);
     if(host==NULL)
     {
-    　　perror("fail to get host by name.");
-        exit(-1);
+	perror("fail to get host by name.");
+	exit(-1);
     }
     printf("Success to get host by name ...\n");
 
     //幹秀socket
     if((sockfd=socket(AF_INET,SOCK_STREAM,0))==-1)
     {
-    　　perror("fail to establish a socket");
-    　　exit(1);
+		perror("fail to establish a socket");
+		exit(1);
     }
     printf("Success to establish a socket...\n");
     
@@ -55,8 +55,8 @@ int main(int argc,char *argv[])
     /*connect the socket*/
     if(connect(sockfd,(struct sockaddr *)&servAddr,sizeof(struct sockaddr_in))==-1)
     {
-    　　perror("fail to connect the socket");
-    　　exit(1);
+	perror("fail to connect the socket");
+	exit(1);
     }
     printf("Success to connect the socket...\n");
 
