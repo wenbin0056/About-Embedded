@@ -260,6 +260,14 @@ FC-CSP
 
 
 
+##### PID
+参考文章：https://blog.csdn.net/asszz/article/details/79271023
+比例、积分、微分
+- 比例控制
+- 积分控制
+
+
+
 
 
 
