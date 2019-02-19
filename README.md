@@ -269,9 +269,13 @@ FC-CSP
 
 
 
-
-
-
+##### kernel编译错误汇总
+1.
+```
+arch/arm64/kernel/entry.S:401: Error: operand 1 should be a floating-point register -- `stp lr,x21,[sp,#240]'
+arch/arm64/kernel/entry.S:405: Error: operand 1 should be a floating-point register -- `stp lr,x21,[sp,#240]'
+```
+解决：编译器版本不对。
 
 
 
