@@ -266,8 +266,44 @@ FC-CSP
 - 比例控制
 - 积分控制
 
+#### 系统移植常用命令
+setenv ipaddr 192.168.1.105
+setenv netmask 255.255.254.0
+setenv serverip 192.168.1.101
 
 
+mw.b 0x44000000 0xff 0x100000
+tftp 0x44000000 u-boot-hi3559av100.bin
+nand erase 0x0 0x100000
+nand write 0x44000000 0x0 0x1000000
+
+
+mw.b 0x44000000 0xff 0x900000
+tftp 0x44000000 uImage_hi3559av100_multi-core
+nand erase 0x100000 0xA00000
+nand write 0x44000000 0x100000 0x900000
+
+mw.b 0x44000000 0xff 0x1000000
+tftp 0x44000000 rootfs_hi3559av100_128k.jffs2
+nand erase 0xA00000 0x1000000
+nand write.jffs2 0x44000000 0xA00000 0x4f6b98
+
+setenv bootargs 'mem=512M console=ttyAMA0,115200 root=/dev/mtdblock2 rw rootfstype=yaffs2 init=/linuxrc mtdparts=hinand:1M(boot),9M(kernel),16M(rootfs)'
+
+
+
+setenv bootcmd 'nand read 0x44000000 0x100000 0x900000;bootm 0x44000000'
+
+saveenv
+
+
+mw.b 0x44000000 0xff 0x1000000
+tftp 0x44000000 rootfs_hi3559av100_2k_24bit.yaffs2
+nand erase 0xA00000 0x1000000
+nand write.yaffs 0x44000000 0xA00000 0xBEFC00
+
+
+osdrv/pub/bin/pc/mkfs.jffs2 -d osdrv/pub/rootfs_glibc_xxx -l -e 0x20000 -o osdrv/pub/rootfs_hi3559av100_128k.jffs2
 
 ##### kernel编译错误汇总
 1.
@@ -278,6 +314,15 @@ arch/arm64/kernel/entry.S:405: Error: operand 1 should be a floating-point regis
 解决：编译器版本不对。
 
 
+
+---
+1. 
+```
+NAND write: device 0 offset 0xa00000, size 0x4f4f84
+!!! The yaffs2 filesystem image has no tag information.
+ please update your mkyaffs2image tool, and remake yaffs2 filesystem image.
+hisilicon # 
+```
 
 
 
