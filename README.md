@@ -324,12 +324,83 @@ NAND write: device 0 offset 0xa00000, size 0x4f4f84
 hisilicon # 
 ```
 
+##### 相机标定
+
+单目标定：
+实时的从摄像机获取拍摄到的棋盘进行标定
+是已经获得了一些棋盘的图片来标定
+
+使用opencv进行单目标定：
+
+通过添加输入参数的代码，然后执行
+source/sample/cpp/imagelist_creator.cpp
+Project3.exe imagelist.yaml  left01.jpg left02.jpg left03.jpg left04.jpg left05.jpg left06.jpg left07.jpg left08.jpg left09.jpg left10.jpg left11.jpg left12.jpg left13.jpg left14.jpg right01.jpg right02.jpg right03.jpg right04.jpg right05.jpg right06.jpg right07.jpg right08.jpg right09.jpg right10.jpg right11.jpg right12.jpg right13.jpg right14.jpg 
+生成imagelist.yaml
+
+source/sample/cpp/calibration.cpp
+Project3.exe -w=6 -h=9 imagelist.yaml
+
+双目标定：
+https://blog.csdn.net/t247555529/article/details/48046859
+
+张正友标定：
+单平面棋盘格的摄像机标定方法
+资料文章：
+https://blog.csdn.net/weixinhum/article/details/78161567
 
 
 
+##### 机器视觉的光源选择
+一个完整的机器视觉系统一般由光源，镜头，相机，采集卡以及处理软件构成。
+根据目标的大小以及变化，拍摄距离及变化等决定光学成像系统的设计和控制。
+
+稳定、清晰、高对比度成像
+680nm 和780nm
+
+
+相机分 
+- 面阵相机 
+面阵相机一次扫描拍摄的是一个二位矩阵
+尺寸规格一般为1/3 1/2 3/4 1 4/3
+- 线阵相机
+线阵相机一次扫描是一个一维矩阵，
+尺寸规格有1K,2K,4K,8K,12K,16K
+
+- 图像处理技术
+模式识别技术
+图像i安索技术
+像元细胞技术
+三维重建技术
+图像的回复与还原技术
+立体视觉技术
+图像系类分析技术
+运算的软硬件优化技术
+
+- 机器视觉系统的应用
+工业视觉方面：
+定位
+PCB板检测，Wafer检测，包装检测，LCD检测，瓶盖检测，货币检测，IC卡检测，
+识别应用
+OCR,一维码二维码，指纹，颜色识别，车牌，人眼
+天文，航天，纤维呈现，高速记录，军工行业，医疗影像。
 
 
 
+OSe光源
+
+##### 镜头分类
+远心镜头
+镜像镜头
+变焦便被镜头
+多CCD镜头
+高放大倍率镜头
+大靶面镜头
+
+
+http://www.opptec.com/pd.jsp?id=93#_jcp=2
+东莞市奥普泰克光源科技有限公司
+
+滤光片：680 780
 
 
 
